@@ -1,8 +1,4 @@
-// import functions
-
-// grab DOM elements
-
-// set event listeners 
-    // get user input
-    // use user input to update state 
-    // update DOM to reflect the new state
+console.log('app.js is running');
+const template = document.querySelector('#template');
+const list = document .quarrySelector('#list');
+console.log('elemnts');
