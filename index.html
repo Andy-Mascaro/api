@@ -12,33 +12,45 @@
         <link rel="stylesheet" href="./styles/reset.css" />
         <link rel="stylesheet" href="./styles/global.css" />
 
-        <title>Cool Web</title>
+        <title>Pokemon or Starwars?</title>
     </head>
 
     <body>
+        <h1></h1>
         <template id="template">
            <h2></h2>
            <h6></h6>
            <img src="" alt=""/>
-</template>
+        </template>
 
-<select name="api" id="api">
-    <option value="star-wars"> Star Wars</option>
+        <select name="api" id="api">
+          <option value="star-wars"> Star Wars</option>
 
-    <option value="pokemon">Pokemon</option>
-</select>
+           <option value="pokemon">Pokemon</option>
+        </select>
+
+        <export async function getPokedex() {
+            let url = 'http://pokedex-alchemy.herokuapp.com/api/pokedex';
+            const resp = await fetch(url);
+            const json = await resp.json();
+            return json.results;
+        }
+
+        
             <div>
                 <div id="defense" name=>
                 <div id="pokemon"></div>
                 <div img="image">
                 </div>
             </div>
-        </template>
+        
         <header>
-            <h1>Pokemon or Starwars?</h1>
+            
         </header>
 
         <main>
+
+        
             <audio id="audio"></audio>
             <ul id="list">
                 
